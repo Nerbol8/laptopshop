@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useReducer } from "react";
-import { API } from "../helpers/consts";
+import { API } from "../helpers/const";
 
 //! Подключение хука CreateContex
 

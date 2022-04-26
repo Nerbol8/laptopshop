@@ -1,7 +1,7 @@
-import React from "react";
+import { cardActionAreaClasses } from "@mui/material";
+import axios from "axios";
 
-const ClientContext = () => {
-  return <div>ClientContext</div>;
-};
+import React, { useEffect, useReducer, useState } from "react";
+import { API } from "../helpers/const";
 
-export default ClientContext;
+export const clientContext = React.createContext();

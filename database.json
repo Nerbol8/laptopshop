@@ -1,3 +1,16 @@
 {
-  "products": []
+  "products": [
+    {
+      "name": "asus",
+      "description": "gdsgdfgrgfdgdfg",
+      "price": 45000,
+      "image": "redg",
+      "ram": "4",
+      "memory": "256",
+      "color": "black",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 1
+    }
+  ]
 }
