@@ -1,3 +1,28 @@
 {
-  "products": []
+  "products": [
+    {
+      "name": "12312",
+      "description": "31231231",
+      "price": 2312312,
+      "image": "31231",
+      "ram": "32",
+      "memory": "512",
+      "color": "black",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 2
+    },
+    {
+      "name": "123123",
+      "description": "123123",
+      "price": 123123,
+      "image": "123123",
+      "ram": "4",
+      "memory": "512",
+      "color": "white",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 3
+    }
+  ]
 }
