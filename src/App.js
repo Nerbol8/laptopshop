@@ -5,9 +5,11 @@ import Navigation from "./Navigation";
 
 const App = () => {
   return (
-    <AdminContext>
-      <Navigation />
-    </AdminContext>
+    <ClientContext>
+      <AdminContext>
+        <Navigation />
+      </AdminContext>
+    </ClientContext>
   );
 };
 

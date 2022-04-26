@@ -10,6 +10,7 @@ export const adminContext = React.createContext();
 
 const initState = {
   products: [],
+  productToEdit: null,
 };
 
 const reducer = (state = initState, action) => {
@@ -38,10 +39,33 @@ const AdminContext = (props) => {
     dispatch(action);
   };
 
+  const saveEditedPruduct = async (editedProduct) => {
+    await axios.patch(`${API}/${editedProduct.id}`, editedProduct);
+  };
+  const deleteProduct = async (id) => {
+    await axios.delete(`${API}/${id}`);
+    getProducts();
+  };
+  const getProductsToEdit = async (id) => {
+    const response = await axios(`${API}/${id}`);
+    // console.log(response.data);
+    const action = {
+      type: "GET_PRODUCT_TO_EDIT",
+      payload: response.data,
+    };
+    dispatch(action);
+  };
+
   return (
     <adminContext.Provider
       value={{
         addProduct: addProduct,
+        getProducts: getProducts,
+        getProductsToEdit: getProductsToEdit,
+        saveEditedPruduct: saveEditedPruduct,
+        deleteProduct: deleteProduct,
+        products: state.products,
+        productToEdit: state.productToEdit,
       }}
     >
       {props.children}
