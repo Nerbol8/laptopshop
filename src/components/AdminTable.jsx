@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const AdminTable = () => {
-  return (
-    <div>AdminSide</div>
-  )
-}
+  return <div>AdminSide</div>;
+};
 
-export default AdminTable
+export default AdminTable;
