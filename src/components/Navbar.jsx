@@ -5,18 +5,26 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
-
+import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-
+import logo from "../assets/techbloc.gif";
 import { Link } from "react-router-dom";
+import { Badge } from "@mui/material";
+import { CardTravel, Logout, ShoppingCart } from "@mui/icons-material";
+import ProductCard from "./ProductCard";
+import { clientContext } from "../contexts/ClientContext";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {
+
+  const data = React.useContext(clientContext)
+const {cartCount,authWithGoogle, user,logOut}= data
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -36,9 +44,8 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar
-      position="sticky"
-    >
+    <React.Fragment>
+    <AppBar position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -46,7 +53,10 @@ const Navbar = () => {
             noWrap
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
-          ></Typography>
+          ><Link to="/">
+            <img width={50} src={logo} alt="" />
+            </Link>
+          </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -56,7 +66,9 @@ const Navbar = () => {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
-            ></IconButton>
+            >
+              <MenuIcon />
+            </IconButton>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -76,13 +88,8 @@ const Navbar = () => {
               }}
             >
               <Link to="/admin-panel">
-                <MenuItem>
-                  <Typography textAlign="center">Admin panel</Typography>
-                </MenuItem>
-              </Link>
-              <Link to="/admin-panel-add">
-                <MenuItem>
-                  <Typography textAlign="center">Add Porudct</Typography>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Admin Panel</Typography>
                 </MenuItem>
               </Link>
             </Menu>
@@ -92,52 +99,42 @@ const Navbar = () => {
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
-          ></Typography>
+          ><Link to="/">
+            <img width={50} src={logo} alt="" />
+            </Link>
+          </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Link to="/admin-panel">
               <Button sx={{ my: 2, color: "white", display: "block" }}>
-                Admin Panel
+                ADMIN PANEl
               </Button>
             </Link>
-            <Link to="/admin-panel-add">
+            <Link to="/admin-panel/add">
               <Button sx={{ my: 2, color: "white", display: "block" }}>
-                Add product
+                ADD PRODUCT
               </Button>
             </Link>
           </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+          <Box style={{display:'flex',alignItems:"center"}} sx={{ flexGrow: 0 }}>
+            <Link to='/cart' style={{marginRight:10}}><Badge badgeContent = {cartCount} color="error">
+              <ShoppingCart/>
+            </Badge>
+            </Link>
+            {user ? (<>
+             <Avatar style={{marginRight:10}} src={user.photoURL} alt={user.displayname}/>
+              <span>{user.email}</span>
+              <Button onClick={logOut}>
+               <Logout color="error"/>
+              </Button>
+              </>
+            ) : (<Button onClick={authWithGoogle} variant="outlined" color="error">Войти</Button>)}
+                  
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
+  
+    </React.Fragment>
   );
 };
 export default Navbar;

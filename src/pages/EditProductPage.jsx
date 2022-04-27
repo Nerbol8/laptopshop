@@ -54,7 +54,7 @@ const EditProductPage = () => {
         <form onSubmit={handleSubmit}>
           <TextField
             onChange={(e) =>
-              setEditedProduct({ ...editedProduct, color: e.target.value })({
+              setEditedProduct({ ...editedProduct, name: e.target.value })({
                 ...editedProduct,
                 name: e.target.value,
               })
@@ -65,7 +65,7 @@ const EditProductPage = () => {
           />
           <TextField
             onChange={(e) =>
-              setEditedProduct({ ...editedProduct, color: e.target.value })({
+              setEditedProduct({ ...editedProduct, description: e.target.value })({
                 ...editedProduct,
                 description: e.target.value,
               })
@@ -77,7 +77,7 @@ const EditProductPage = () => {
           <TextField
             type="number"
             onChange={(e) =>
-              setEditedProduct({ ...editedProduct, color: e.target.value })({
+              setEditedProduct({ ...editedProduct, price: e.target.value })({
                 ...editedProduct,
                 price: parseInt(e.target.value),
               })
@@ -119,7 +119,7 @@ const EditProductPage = () => {
             <InputLabel id="memory-select-label">Выберите память</InputLabel>
             <Select
               onChange={(e) =>
-                setEditedProduct({ ...editedProduct, color: e.target.value })({
+                setEditedProduct({ ...editedProduct, memory: e.target.value })({
                   ...editedProduct,
                   memory: e.target.value,
                 })
@@ -138,7 +138,7 @@ const EditProductPage = () => {
             <InputLabel id="ram-select-label">Выберите Озу</InputLabel>
             <Select
               onChange={(e) =>
-                setEditedProduct({ ...editedProduct, color: e.target.value })({
+                setEditedProduct({ ...editedProduct, ram: e.target.value })({
                   ...editedProduct,
                   ram: e.target.value,
                 })

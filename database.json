@@ -4,37 +4,49 @@
       "name": "asus",
       "description": "gdsgdfgrgfdgdfg",
       "price": 45000,
-      "image": "redg",
+      "image": "https://login.kg/image/cache/catalog/new/Notebook/Huawei/MagicBook%2014/1-228x228.jpg",
       "ram": "4",
       "memory": "256",
       "color": "black",
       "feedbacks": [],
-      "likes": 0,
+      "likes": 1,
       "id": 1
     },
     {
-      "name": "12312",
+      "name": "12312dwa",
       "description": "31231231",
       "price": 2312312,
-      "image": "31231",
+      "image": "https://login.kg/image/cache/catalog/new/Notebook/Huawei/MagicBook%2014/1-228x228.jpg",
       "ram": "32",
       "memory": "512",
       "color": "black",
       "feedbacks": [],
-      "likes": 0,
+      "likes": 1,
       "id": 2
     },
     {
       "name": "123123",
       "description": "123123",
       "price": 123123,
-      "image": "123123",
+      "image": "https://login.kg/image/cache/catalog/new/Notebook/Huawei/MagicBook%2014/1-228x228.jpg",
       "ram": "4",
       "memory": "512",
       "color": "white",
       "feedbacks": [],
       "likes": 0,
       "id": 3
+    },
+    {
+      "name": "123123",
+      "description": "123123",
+      "price": 12313,
+      "image": "https://login.kg/image/cache/catalog/new/Notebook/Huawei/MagicBook%2014/1-228x228.jpg",
+      "ram": "4",
+      "memory": "512",
+      "color": "white",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 4
     }
   ]
 }
