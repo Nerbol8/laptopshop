@@ -14,7 +14,12 @@ import MenuItem from "@mui/material/MenuItem";
 import logo from "../assets/techbloc.gif";
 import { Link } from "react-router-dom";
 import { Badge } from "@mui/material";
-import { CardTravel, Logout, ShoppingCart } from "@mui/icons-material";
+import {
+  BookmarkAdd,
+  CardTravel,
+  Logout,
+  ShoppingCart,
+} from "@mui/icons-material";
 import ProductCard from "./ProductCard";
 import { clientContext } from "../contexts/ClientContext";
 
@@ -116,6 +121,15 @@ const Navbar = () => {
                 </Button>
               </Link>
             </Box>
+
+            <Box>
+              <Link to="/favorite" style={{ marginRight: 10 }}>
+                <Badge color="error" badgeContent={cartCount}>
+                  <BookmarkAdd />
+                </Badge>
+              </Link>
+            </Box>
+
             <Box
               style={{ display: "flex", alignItems: "center" }}
               sx={{ flexGrow: 0 }}
