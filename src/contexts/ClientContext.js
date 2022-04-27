@@ -1,7 +1,14 @@
 import { cardActionAreaClasses } from "@mui/material";
 import axios from "axios";
+import {
+  GoogleAuthProvider,
+  onAuthStateChanged,
+  signInWithPopup,
+  signOut,
+} from "firebase/auth";
 
 import React, { useEffect, useReducer, useState } from "react";
+import { auth } from "../firebase";
 import { API } from "../helpers/const";
 
 export const clientContext = React.createContext();
@@ -60,7 +67,7 @@ const ClientContext = (props) => {
   const totalCount = state.products.length;
 
   const handlePagination = (page) => {
-    // setCurrentPage(page);
+    setCurrentPage(page);
     setCurrentPage(currentPage + 1);
   };
 
@@ -166,24 +173,24 @@ const ClientContext = (props) => {
     dispatch(action);
   };
 
-  // const authWithGoogle = async () => {
-  //   const provider = new GoogleAuthProvider();
-  //   signInWithPopup(auth, provider);
-  // };
+  const authWithGoogle = async () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider);
+  };
 
-  // useEffect(() => {
-  //   onAuthStateChanged(auth, (user) => {
-  //     const action = {
-  //       type: "CHECK_USER",
-  //       payload: user,
-  //     };
-  //     dispatch(action);
-  //   });
-  // }, []);
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      const action = {
+        type: "CHECK_USER",
+        payload: user,
+      };
+      dispatch(action);
+    });
+  }, []);
 
-  // const logOut = () => {
-  //   signOut(auth);
-  // };
+  const logOut = () => {
+    signOut(auth);
+  };
 
   const addFeedback = async (newFeedback, product) => {
     if (product.feedBacks) {
@@ -207,8 +214,8 @@ const ClientContext = (props) => {
         changeCountProductInCart: changeCountProductInCart,
         likeCounter: likeCounter,
         getProductDetails: getProductDetails,
-        //   authWithGoogle: authWithGoogle,
-        //   logOut: logOut,
+        authWithGoogle: authWithGoogle,
+        logOut: logOut,
         addFeedback: addFeedback,
         products: products,
         totalCount: totalCount,

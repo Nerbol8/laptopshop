@@ -45,7 +45,7 @@ const {cartCount,authWithGoogle, user,logOut}= data
 
   return (
     <React.Fragment>
-    <AppBar position="sticky">
+    <AppBar color="transparent" position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -109,7 +109,7 @@ const {cartCount,authWithGoogle, user,logOut}= data
                 ADMIN PANEl
               </Button>
             </Link>
-            <Link to="/admin-panel/add">
+            <Link to="/admin-panel-add">
               <Button sx={{ my: 2, color: "white", display: "block" }}>
                 ADD PRODUCT
               </Button>
