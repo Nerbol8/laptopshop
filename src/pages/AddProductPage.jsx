@@ -68,7 +68,7 @@ const AddProductPage = () => {
             }
             value={newProduct.name}
             label="Введите название"
-            variant="standard"
+            variant="outlined"
           />
           <TextField
             onChange={(e) =>
@@ -76,7 +76,7 @@ const AddProductPage = () => {
             }
             value={newProduct.description}
             label="Введите описание"
-            variant="standard"
+            variant="outlined"
           />
           <TextField
             type="number"
@@ -85,17 +85,17 @@ const AddProductPage = () => {
             }
             value={newProduct.price}
             label="Введите цену"
-            variant="standard"
+            variant="outlined"
           />
           <TextField
             onChange={(e) =>
               setNewProduct({ ...newProduct, image: e.target.value })
             }
             value={newProduct.image}
-            label="Введите фото"
-            variant="standard"
+            label="Ссылка на фото"
+            variant="outlined"
           />
-          <FormControl variant="standard">
+          <FormControl variant="outlined">
             <InputLabel id="color-select-label">Выберите цвет</InputLabel>
             <Select
               onChange={(e) =>
@@ -113,7 +113,7 @@ const AddProductPage = () => {
               <MenuItem value="red">Красный</MenuItem>
             </Select>
           </FormControl>
-          <FormControl variant="standard">
+          <FormControl variant="outlined">
             <InputLabel id="memory-select-label">Выберите память</InputLabel>
             <Select
               onChange={(e) =>
@@ -129,7 +129,7 @@ const AddProductPage = () => {
               <MenuItem value="2048">2048 GB</MenuItem>
             </Select>
           </FormControl>
-          <FormControl variant="standard">
+          <FormControl variant="outlined">
             <InputLabel id="ram-select-label">Выберите Озу</InputLabel>
             <Select
               onChange={(e) =>

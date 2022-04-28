@@ -6,9 +6,9 @@ import bgImage from "./videos/background.mp4";
 const App = () => {
   return (
     <ClientContext>
-      <video className="videoApp" autoPlay loop muted>
+      {/* <video className="videoApp" autoPlay loop muted>
         <source src={bgImage} type="video/mp4" />
-      </video>
+      </video> */}
       <AdminContext>
         <Navigation />
       </AdminContext>
