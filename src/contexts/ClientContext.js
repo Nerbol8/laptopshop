@@ -8,6 +8,7 @@ import {
 } from "firebase/auth";
 
 import React, { useEffect, useReducer, useState } from "react";
+import Backgound from "../components/Backgound";
 import { auth } from "../firebase";
 import { API } from "../helpers/const";
 import OrderPage from "../pages/OrderPage";
