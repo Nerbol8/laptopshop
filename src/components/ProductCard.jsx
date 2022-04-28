@@ -76,7 +76,7 @@ export default function ProductCard({ item }) {
           }}
           aria-label="add to favorites"
         >
-          <FavoriteIcon color={liked ? "error" : "info"} />
+          <FavoriteIcon color={liked ? "default" : "error"} />
           <span>{item.likes}</span>
         </IconButton>
         <IconButton aria-label="share">
@@ -84,7 +84,7 @@ export default function ProductCard({ item }) {
         </IconButton>
         {checkProductInCart(item.id) ? (
           <IconButton onClick={() => deleteProductInCart(item.id)}>
-            <ShoppingCartIcon color="info" />
+            <ShoppingCartIcon color="disabled" />
           </IconButton>
         ) : (
           <IconButton onClick={() => addProductToCart(item)}>
