@@ -15,13 +15,30 @@ import logo from "../assets/techbloc.gif";
 import { Link } from "react-router-dom";
 import { Badge } from "@mui/material";
 import {
+  AddModerator,
+  AdminPanelSettings,
   BookmarkAdd,
   CardTravel,
+  Cyclone,
   Logout,
   ShoppingCart,
 } from "@mui/icons-material";
 import ProductCard from "./ProductCard";
 import { clientContext } from "../contexts/ClientContext";
+import styled from "styled-components";
+
+//! Styled Components
+
+const AdminButton = styled.button`
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  margin: 0px 70px;
+`;
+
+//! end of styled
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -49,7 +66,7 @@ const Navbar = () => {
 
   return (
     <React.Fragment>
-      <AppBar position="sticky">
+      <AppBar position="sticky" color="transparent">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Typography
@@ -59,7 +76,7 @@ const Navbar = () => {
               sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
             >
               <Link to="/">
-                <img width={50} src={logo} alt="" />
+                <Cyclone className="logoAnimation" />
               </Link>
             </Typography>
 
@@ -94,7 +111,31 @@ const Navbar = () => {
               >
                 <Link to="/admin-panel">
                   <MenuItem onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">Admin Panel</Typography>
+                    <Link to="/admin-panel">
+                      <AdminButton textAlign="center">
+                        <AdminPanelSettings />
+                      </AdminButton>
+                    </Link>
+                    <Link to="/admin-panel-add">
+                      <Typography textAlign="center">
+                        <AddModerator />
+                      </Typography>{" "}
+                    </Link>
+
+                    <Link
+                      to="/cart"
+                      style={({ marginRight: 70 }, { marginLeft: 70 })}
+                    >
+                      <Badge badgeContent={cartCount} color="default">
+                        <ShoppingCart />
+                      </Badge>
+                    </Link>
+
+                    <Link to="/favorite" style={{ marginRight: 10 }}>
+                      <Badge color="default" badgeContent={cartCount}>
+                        <BookmarkAdd />
+                      </Badge>
+                    </Link>
                   </MenuItem>
                 </Link>
               </Menu>
@@ -106,56 +147,69 @@ const Navbar = () => {
               sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
             >
               <Link to="/">
-                <img width={50} src={logo} alt="" />
+                <Cyclone className="logoAnimation" />
               </Link>
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               <Link to="/admin-panel">
-                <Button sx={{ my: 2, color: "white", display: "block" }}>
-                  ADMIN PANEl
-                </Button>
+                <AdminButton sx={{ my: 2, color: "white", display: "block" }}>
+                  <AdminPanelSettings />
+                </AdminButton>
               </Link>
               <Link to="/admin-panel-add">
-                <Button sx={{ my: 2, color: "white", display: "block" }}>
-                  ADD PRODUCT
-                </Button>
+                <AdminButton sx={{ my: 2, color: "white", display: "block" }}>
+                  <AddModerator />
+                </AdminButton>
               </Link>
             </Box>
 
-            <Box>
+            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               <Link to="/favorite" style={{ marginRight: 10 }}>
-                <Badge color="error" badgeContent={cartCount}>
+                <Badge color="default" badgeContent={cartCount}>
                   <BookmarkAdd />
                 </Badge>
               </Link>
             </Box>
-
-            <Box
-              style={{ display: "flex", alignItems: "center" }}
-              sx={{ flexGrow: 0 }}
-            >
-              <Link to="/cart" style={{ marginRight: 10 }}>
-                <Badge badgeContent={cartCount} color="error">
+            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+              <Link
+                to="/cart"
+                style={({ marginRight: 70 }, { marginLeft: 70 })}
+              >
+                <Badge badgeContent={cartCount} color="default">
                   <ShoppingCart />
                 </Badge>
               </Link>
+            </Box>
+            <Box
+              style={{ display: "flex", alignItems: "center" }}
+              sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+            >
               {user ? (
                 <>
-                  <Avatar
-                    style={{ marginRight: 10 }}
-                    src={user.photoURL}
-                    alt={user.displayname}
-                  />
-                  <span>{user.email}</span>
+                  <Box
+                    sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
+                  >
+                    <Avatar
+                      style={{ marginRight: 10 }}
+                      src={user.photoURL}
+                      alt={user.displayname}
+                    />
+                  </Box>
+                  <Box
+                    sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+                  >
+                    <span className="userName">{user.email}</span>
+                  </Box>
                   <Button onClick={logOut}>
-                    <Logout color="error" />
+                    <Logout color="inherit" className="logoutColor" />
                   </Button>
                 </>
               ) : (
                 <Button
                   onClick={authWithGoogle}
                   variant="outlined"
-                  color="error"
+                  color="inherit"
+                  sx={{ mx: 14 }}
                 >
                   Войти
                 </Button>
