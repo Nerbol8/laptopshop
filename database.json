@@ -9,7 +9,7 @@
       "memory": "256",
       "color": "black",
       "feedbacks": [],
-      "likes": 2,
+      "likes": 7,
       "id": 1,
       "feedBacks": [
         {
@@ -27,7 +27,7 @@
       "memory": "512",
       "color": "black",
       "feedbacks": [],
-      "likes": 2,
+      "likes": 3,
       "id": 2
     },
     {
@@ -39,7 +39,7 @@
       "memory": "512",
       "color": "white",
       "feedbacks": [],
-      "likes": 1,
+      "likes": 2,
       "id": 3
     },
     {
@@ -51,7 +51,7 @@
       "memory": "512",
       "color": "white",
       "feedbacks": [],
-      "likes": 0,
+      "likes": 2,
       "id": 4
     },
     {
@@ -63,7 +63,7 @@
       "memory": "512",
       "color": "white",
       "feedbacks": [],
-      "likes": 0,
+      "likes": 1,
       "id": 5
     },
     {
@@ -87,7 +87,7 @@
       "memory": "512",
       "color": "white",
       "feedbacks": [],
-      "likes": 0,
+      "likes": 1,
       "id": 7
     }
   ]

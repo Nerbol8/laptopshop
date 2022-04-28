@@ -113,12 +113,12 @@ const Navbar = () => {
                   <MenuItem onClick={handleCloseNavMenu}>
                     <Link to="/admin-panel">
                       <AdminButton textAlign="center">
-                        <AdminPanelSettings />
+                        <AdminPanelSettings className="colorGray" />
                       </AdminButton>
                     </Link>
                     <Link to="/admin-panel-add">
                       <Typography textAlign="center">
-                        <AddModerator />
+                        <AddModerator className="colorGray" />
                       </Typography>{" "}
                     </Link>
 
@@ -127,13 +127,13 @@ const Navbar = () => {
                       style={({ marginRight: 70 }, { marginLeft: 70 })}
                     >
                       <Badge badgeContent={cartCount} color="default">
-                        <ShoppingCart />
+                        <ShoppingCart className="colorGray" />
                       </Badge>
                     </Link>
 
                     <Link to="/favorite" style={{ marginRight: 10 }}>
                       <Badge color="default" badgeContent={cartCount}>
-                        <BookmarkAdd />
+                        <BookmarkAdd className="colorGray" />
                       </Badge>
                     </Link>
                   </MenuItem>
@@ -153,12 +153,12 @@ const Navbar = () => {
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               <Link to="/admin-panel">
                 <AdminButton sx={{ my: 2, color: "white", display: "block" }}>
-                  <AdminPanelSettings />
+                  <AdminPanelSettings className="colorGray" />
                 </AdminButton>
               </Link>
               <Link to="/admin-panel-add">
                 <AdminButton sx={{ my: 2, color: "white", display: "block" }}>
-                  <AddModerator />
+                  <AddModerator className="colorGray" />
                 </AdminButton>
               </Link>
             </Box>
@@ -166,7 +166,7 @@ const Navbar = () => {
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               <Link to="/favorite" style={{ marginRight: 10 }}>
                 <Badge color="default" badgeContent={cartCount}>
-                  <BookmarkAdd />
+                  <BookmarkAdd className="colorGray" />
                 </Badge>
               </Link>
             </Box>
@@ -176,7 +176,7 @@ const Navbar = () => {
                 style={({ marginRight: 70 }, { marginLeft: 70 })}
               >
                 <Badge badgeContent={cartCount} color="default">
-                  <ShoppingCart />
+                  <ShoppingCart className="colorGray" />
                 </Badge>
               </Link>
             </Box>

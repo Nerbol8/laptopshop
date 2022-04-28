@@ -5,6 +5,7 @@ import FilterBlock from "../components/FilterBlock";
 import ErbolPagination from "../components/ErbolPagination";
 import ProductCard from "../components/ProductCard";
 import { clientContext } from "../contexts/ClientContext";
+import News from "../components/News";
 
 const MainPage = () => {
   const data = useContext(clientContext);
@@ -16,10 +17,12 @@ const MainPage = () => {
 
   return (
     <div>
+      {/* <News /> */}
       <Container>
         <div>
           <FilterBlock getProducts={getProducts} />
         </div>
+
         <InfiniteScroll
           dataLength={products.length}
           next={handlePagination}
