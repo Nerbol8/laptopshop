@@ -1,3 +1,4 @@
+import { Backspace } from "@mui/icons-material";
 import {
   Button,
   FormControl,
@@ -42,13 +43,13 @@ const FilterBlock = ({ getProducts }) => {
   return (
     <div className="filters-block">
       <TextField
-        variant="standard"
+        variant="outlined"
         value={searchValue}
         onChange={(e) => handleFilters("q", e.target.value)}
         type="search"
         label="Живой поиск..."
       />
-      <FormControl variant="standard">
+      <FormControl variant="outlined">
         <InputLabel id="color-label">Выберите цвет</InputLabel>
         <Select
           value={colorValue}
@@ -64,7 +65,7 @@ const FilterBlock = ({ getProducts }) => {
           <MenuItem value="red">Красный</MenuItem>
         </Select>
       </FormControl>
-      <FormControl variant="standard">
+      <FormControl variant="outlined">
         <InputLabel id="color-label">Выберите память</InputLabel>
         <Select
           value={memoryValue}
@@ -78,7 +79,7 @@ const FilterBlock = ({ getProducts }) => {
           <MenuItem value="2048">2048</MenuItem>
         </Select>
       </FormControl>
-      <FormControl variant="standard">
+      <FormControl variant="outlined">
         <InputLabel id="color-label">Выберите ram</InputLabel>
         <Select
           value={ramValue}
@@ -93,8 +94,8 @@ const FilterBlock = ({ getProducts }) => {
           <MenuItem value="xxl">64</MenuItem>
         </Select>
       </FormControl>
-      <Button variant="outlined" color="primary" onClick={resetFilter}>
-        Сбросить
+      <Button variant="outlined" color="inherit" onClick={resetFilter}>
+        <Backspace />
       </Button>
     </div>
   );
