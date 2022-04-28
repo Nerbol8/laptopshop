@@ -31,8 +31,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-
-
 export default function CustomizedTables(props) {
   const data = React.useContext(adminContext);
   const { deleteProduct } = data;
@@ -46,7 +44,7 @@ export default function CustomizedTables(props) {
             <StyledTableCell align="right">Название</StyledTableCell>
             <StyledTableCell align="right">цена</StyledTableCell>
             <StyledTableCell align="right">память</StyledTableCell>
-            <StyledTableCell align="right">память озу</StyledTableCell>
+            <StyledTableCell align="right"> ОЗУ</StyledTableCell>
             <StyledTableCell align="right">#</StyledTableCell>
             <StyledTableCell align="right">#</StyledTableCell>
           </TableRow>
@@ -68,7 +66,7 @@ export default function CustomizedTables(props) {
               <StyledTableCell align="right">{item.ram}</StyledTableCell>
               <StyledTableCell align="right">{item.memory}</StyledTableCell>
               <StyledTableCell align="right">{item.color}</StyledTableCell>
-              <StyledTableCell align="right">{item.memory}</StyledTableCell>
+              {/* <StyledTableCell align="right">{item.memory}</StyledTableCell> */}
 
               <StyledTableCell align="right">
                 <Link to={`/admin-panel-edit/${item.id}`}>EDIT</Link>

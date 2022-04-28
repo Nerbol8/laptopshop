@@ -9,8 +9,14 @@
       "memory": "256",
       "color": "black",
       "feedbacks": [],
-      "likes": 1,
-      "id": 1
+      "likes": 2,
+      "id": 1,
+      "feedBacks": [
+        {
+          "title": "asddsa",
+          "user": "add"
+        }
+      ]
     },
     {
       "name": "12312dwa",

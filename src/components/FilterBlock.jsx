@@ -17,24 +17,24 @@ const FilterBlock = ({ getProducts }) => {
   //! Состояния
   const [searchValue, setSearchValue] = useState(filter.get("q") || "");
   const [colorValue, setColorValue] = useState(filter.get("color") || "");
-  const [sizeValue, setSizeValue] = useState(filter.get("ram") || "");
   const [memoryValue, setMemoryValue] = useState(filter.get("memory") || "");
+  const [ramValue, setRamValue] = useState(filter.get("ram") || "");
 
   const handleFilters = (key, value) => {
     filter.set(key, value);
     navigate(`${location.pathname}?${filter.toString()}`);
     setSearchValue(filter.get("q") || "");
     setColorValue(filter.get("color") || "");
-    setSizeValue(filter.get("size") || "");
     setMemoryValue(filter.get("memory") || "");
+    setRamValue(filter.get("ram") || "");
     getProducts();
   };
 
   const resetFilter = () => {
     setSearchValue("");
     setColorValue("");
-    setSizeValue("");
     setMemoryValue("");
+    setRamValue("");
     navigate("/");
     getProducts();
   };
@@ -65,11 +65,11 @@ const FilterBlock = ({ getProducts }) => {
         </Select>
       </FormControl>
       <FormControl variant="standard">
-        <InputLabel id="color-label">Выберите ram</InputLabel>
+        <InputLabel id="color-label">Выберите память</InputLabel>
         <Select
-          value={sizeValue}
-          onChange={(e) => handleFilters("ram", e.target.value)}
-          label="Выберите ram"
+          value={memoryValue}
+          onChange={(e) => handleFilters("memory", e.target.value)}
+          label="Выберите память"
           labelId="color-label"
         >
           <MenuItem value="256">256</MenuItem>
@@ -81,8 +81,8 @@ const FilterBlock = ({ getProducts }) => {
       <FormControl variant="standard">
         <InputLabel id="color-label">Выберите ram</InputLabel>
         <Select
-          value={memoryValue}
-          onChange={(e) => handleFilters("memory", e.target.value)}
+          value={ramValue}
+          onChange={(e) => handleFilters("ram", e.target.value)}
           label="Выберите ram"
           labelId="color-label"
         >

@@ -10,6 +10,7 @@ import {
 import React, { useEffect, useReducer, useState } from "react";
 import { auth } from "../firebase";
 import { API } from "../helpers/const";
+import OrderPage from "../pages/OrderPage";
 
 export const clientContext = React.createContext();
 
@@ -217,6 +218,7 @@ const ClientContext = (props) => {
         authWithGoogle: authWithGoogle,
         logOut: logOut,
         addFeedback: addFeedback,
+        OrderPage: OrderPage,
         products: products,
         totalCount: totalCount,
         productsPerPage: productsPerPage,

@@ -1,7 +1,8 @@
-import { Input, TextField } from "@mui/material";
+// import { Input, TextField } from "@mui/material";
 import React from "react";
 import "./OrderPage.css";
 import CARDS from "../assets/card_img.png";
+import ProductDetailsPage from "./ProductDetailsPage";
 
 const OrderPage = () => {
   return (

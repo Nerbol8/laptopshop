@@ -2,6 +2,7 @@ import { Button, Container, TextField } from "@mui/material";
 import React, { useEffect, useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import { clientContext } from "../contexts/ClientContext";
+import OrderPage from "../pages/OrderPage";
 
 const ProductDetailsPage = () => {
   const data = useContext(clientContext);
@@ -45,7 +46,7 @@ const ProductDetailsPage = () => {
             <h2>{productDetails.name}</h2>
             <ul>
               <li>
-                <strong>цЕНА</strong>
+                <strong>ЦЕНА</strong>
                 {productDetails.price}
               </li>
               <li>
@@ -53,7 +54,7 @@ const ProductDetailsPage = () => {
                 {productDetails.color}
               </li>
               <li>
-                <strong>размер</strong>
+                <strong>память</strong>
                 {productDetails.memory}
               </li>
               <li>
@@ -61,11 +62,17 @@ const ProductDetailsPage = () => {
                 {productDetails.description}
               </li>
               <li>
-                <strong>описание</strong>
+                <strong>ОЗУ</strong>
                 {productDetails.ram}
               </li>
             </ul>
           </div>
+        </div>
+
+        <div className="product-buy">
+          <Button onClick={OrderPage} type="submit">
+            Заказать
+          </Button>
         </div>
         <div className="product-detail-feedback">
           <h3>Отзывы</h3>
@@ -75,9 +82,10 @@ const ProductDetailsPage = () => {
               value={feedbackUser}
               type="text"
               variant="standard"
-              label="ввведите ваш Имя"
+              label="введите ваше Имя"
               style={{ marginBottom: 15 }}
             />
+
             <TextField
               value={feedbackValue}
               onChange={(e) => setFeedbackValue(e.target.value)}
@@ -85,7 +93,7 @@ const ProductDetailsPage = () => {
               multiline
               minRows={3}
               maxRows={5}
-              label="ввведите ваш отзыв"
+              label="введите ваш отзыв"
               style={{ marginBottom: 15 }}
             />
             <Button type="submit">Сотавитьс отзыв</Button>
