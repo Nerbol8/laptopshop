@@ -1,94 +1,107 @@
 {
   "products": [
     {
-      "name": "asus",
-      "description": "gdsgdfgrgfdgdfg",
-      "price": "45000",
-      "image": "https://login.kg/image/cache/catalog/new/Notebook/Huawei/MagicBook%2014/1-228x228.jpg",
-      "ram": "8",
-      "memory": "256",
+      "name": "Ноутбук Asus ROG Strix Gaming (GL531GT-RS73) 15.6\" FHD, Intel Core i7-9750H, 16GB DDR4, 128GB / 256GB / 512GB / 1TB SSD",
+      "description": "Внешний вид товара может отличаться от фото, представленных на сайте. Просим вас перед покупкой уточнять наличие у менеджеров!",
+      "price": 89000,
+      "image": "https://rozetked.me/images/uploads/Jj0wN861DZT9.jpg",
+      "ram": "32",
+      "memory": "2048",
       "color": "black",
       "feedbacks": [],
-      "likes": 7,
-      "id": 1,
+      "likes": 2,
+      "id": 1
+    },
+    {
+      "name": "Ноутбук Asus ROG Strix Gaming (GL531GT-RS73) 15.6\" FHD, Intel Core i7-9750H, 16GB DDR4, 128GB / 256GB / 512GB / 1TB SSD",
+      "description": "Внешний вид товара может отличаться от фото, представленных на сайте. Просим вас перед покупкой уточнять наличие у менеджеров!",
+      "price": 120000,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLWIbTEppqbBJzLWJz6hjGyp6dsmwYN9w6TZ_9AWQs00tU2ODeIXpE_RgGYiOQJfODrFs&usqp=CAU",
+      "ram": "16",
+      "memory": "512",
+      "color": "white",
+      "id": 2,
+      "likes": 1,
       "feedBacks": [
         {
-          "title": "asddsa",
-          "user": "add"
+          "title": "asdasdasdasdasd",
+          "user": "asdasda"
+        },
+        {
+          "title": "asdasd",
+          "user": "dasasd"
+        },
+        {
+          "title": "1231232",
+          "user": "123123"
         }
       ]
     },
     {
-      "name": "12312dwa",
-      "description": "31231231",
-      "price": 2312312,
-      "image": "https://login.kg/image/cache/catalog/new/Notebook/Huawei/MagicBook%2014/1-228x228.jpg",
-      "ram": "32",
-      "memory": "512",
-      "color": "black",
+      "name": "Ноутбук Asus TUF Gaming F15 (FX506LI-BI5N5) 15.6\" FHD, Intel Core i5-10300H, 8GB DDR4, 128GB / 256GB / 512GB / 1TB SSD",
+      "description": "Laptop Asus TUF Gaming F15 (FX506LI-BI5N5)  15.6\" FHD (1920x1080) IPS  Intel Core i5-10300H (2.5GHz-4.5Ghz)  8GB DDR4  128GB SSD PCIe NVMe  NVIDIA GeForce GTX 1650 Ti 4GB  GbE LAN, USB-C 3.2, WiFi 6 ax, BT, HD Cam  RGB Backlit Keyboard (Eng+Rus)  Windows 10 Home  Black",
+      "price": 220000,
+      "image": "https://tvernews.ru/uploads/BQPv6Xu30ZVEpWJz5uehnjAQHIK2dq.jpg",
+      "ram": "16",
+      "memory": "2048",
+      "color": "blue",
       "feedbacks": [],
-      "likes": 3,
-      "id": 2
-    },
-    {
-      "name": "123123",
-      "description": "123123",
-      "price": 123123,
-      "image": "https://login.kg/image/cache/catalog/new/Notebook/Huawei/MagicBook%2014/1-228x228.jpg",
-      "ram": "4",
-      "memory": "512",
-      "color": "white",
-      "feedbacks": [],
-      "likes": 2,
+      "likes": 1,
       "id": 3
     },
     {
-      "name": "123123",
-      "description": "123123",
-      "price": 12313,
-      "image": "https://login.kg/image/cache/catalog/new/Notebook/Huawei/MagicBook%2014/1-228x228.jpg",
-      "ram": "4",
-      "memory": "512",
-      "color": "white",
-      "feedbacks": [],
-      "likes": 2,
+      "name": "Ноутбук Asus TUF Gaming F15 (FX506LI-BI5N5) 15.6\" FHD, Intel Core i5-10300H, 8GB DDR4, 128GB / 256GB / 512GB / 1TB SSD",
+      "description": "Laptop Asus TUF Gaming F15 (FX506LI-BI5N5)  15.6\" FHD (1920x1080) IPS  Intel Core i5-10300H (2.5GHz-4.5Ghz)  8GB DDR4  128GB SSD PCIe NVMe  NVIDIA GeForce GTX 1650 Ti 4GB  GbE LAN, USB-C 3.2, WiFi 6 ax, BT, HD Cam  RGB Backlit Keyboard (Eng+Rus)  Windows 10 Home  Black",
+      "price": 156000,
+      "image": "https://focus.ua/static/storage/thumbs/920x465/f/18/f190ae0f-56e85bf54c090f68269967acb4fc018f.jpg?v=2294_1",
+      "ram": "64",
+      "memory": "1024",
+      "color": "yellow",
       "id": 4
     },
     {
-      "name": "123123",
-      "description": "123123",
-      "price": 12313,
-      "image": "https://login.kg/image/cache/catalog/new/Notebook/Huawei/MagicBook%2014/1-228x228.jpg",
-      "ram": "4",
-      "memory": "512",
-      "color": "white",
+      "name": "Ноутбук Asus TUF Gaming F15 (FX506LI-BI5N5) 15.6\" FHD, Intel Core i5-10300H, 8GB DDR4, 128GB / 256GB / 512GB / 1TB SSD",
+      "description": "Laptop Asus TUF Gaming F15 (FX506LI-BI5N5)  15.6\" FHD (1920x1080) IPS  Intel Core i5-10300H (2.5GHz-4.5Ghz)  8GB DDR4  128GB SSD PCIe NVMe  NVIDIA GeForce GTX 1650 Ti 4GB  GbE LAN, USB-C 3.2, WiFi 6 ax, BT, HD Cam  RGB Backlit Keyboard (Eng+Rus)  Windows 10 Home  Black",
+      "price": 220000,
+      "image": "https://tvernews.ru/uploads/BQPv6Xu30ZVEpWJz5uehnjAQHIK2dq.jpg",
+      "ram": "16",
+      "memory": "2048",
+      "color": "blue",
       "feedbacks": [],
       "likes": 1,
-      "id": 5
+      "id": 3987
     },
     {
-      "name": "123123",
-      "description": "123123",
-      "price": 12313,
-      "image": "https://login.kg/image/cache/catalog/new/Notebook/Huawei/MagicBook%2014/1-228x228.jpg",
-      "ram": "4",
-      "memory": "512",
-      "color": "white",
-      "feedbacks": [],
-      "likes": 1,
-      "id": 6
+      "name": "Ноутбук Asus TUF Gaming F15 (FX506LI-BI5N5) 15.6\" FHD, Intel Core i5-10300H, 8GB DDR4, 128GB / 256GB / 512GB / 1TB SSD",
+      "description": "Laptop Asus TUF Gaming F15 (FX506LI-BI5N5)  15.6\" FHD (1920x1080) IPS  Intel Core i5-10300H (2.5GHz-4.5Ghz)  8GB DDR4  128GB SSD PCIe NVMe  NVIDIA GeForce GTX 1650 Ti 4GB  GbE LAN, USB-C 3.2, WiFi 6 ax, BT, HD Cam  RGB Backlit Keyboard (Eng+Rus)  Windows 10 Home  Black",
+      "price": 156000,
+      "image": "https://focus.ua/static/storage/thumbs/920x465/f/18/f190ae0f-56e85bf54c090f68269967acb4fc018f.jpg?v=2294_1",
+      "ram": "64",
+      "memory": "1024",
+      "color": "yellow",
+      "id": 45678
     },
     {
-      "name": "123123",
-      "description": "123123",
-      "price": 12313,
-      "image": "https://login.kg/image/cache/catalog/new/Notebook/Huawei/MagicBook%2014/1-228x228.jpg",
-      "ram": "4",
-      "memory": "512",
-      "color": "white",
+      "name": "Ноутбук Asus TUF Gaming F15 (FX506LI-BI5N5) 15.6\" FHD, Intel Core i5-10300H, 8GB DDR4, 128GB / 256GB / 512GB / 1TB SSD",
+      "description": "Laptop Asus TUF Gaming F15 (FX506LI-BI5N5)  15.6\" FHD (1920x1080) IPS  Intel Core i5-10300H (2.5GHz-4.5Ghz)  8GB DDR4  128GB SSD PCIe NVMe  NVIDIA GeForce GTX 1650 Ti 4GB  GbE LAN, USB-C 3.2, WiFi 6 ax, BT, HD Cam  RGB Backlit Keyboard (Eng+Rus)  Windows 10 Home  Black",
+      "price": 220000,
+      "image": "https://tvernews.ru/uploads/BQPv6Xu30ZVEpWJz5uehnjAQHIK2dq.jpg",
+      "ram": "16",
+      "memory": "2048",
+      "color": "blue",
       "feedbacks": [],
-      "likes": 1,
-      "id": 7
+      "likes": 0,
+      "id": 3123
+    },
+    {
+      "name": "Ноутбук Asus TUF Gaming F15 (FX506LI-BI5N5) 15.6\" FHD, Intel Core i5-10300H, 8GB DDR4, 128GB / 256GB / 512GB / 1TB SSD",
+      "description": "Laptop Asus TUF Gaming F15 (FX506LI-BI5N5)  15.6\" FHD (1920x1080) IPS  Intel Core i5-10300H (2.5GHz-4.5Ghz)  8GB DDR4  128GB SSD PCIe NVMe  NVIDIA GeForce GTX 1650 Ti 4GB  GbE LAN, USB-C 3.2, WiFi 6 ax, BT, HD Cam  RGB Backlit Keyboard (Eng+Rus)  Windows 10 Home  Black",
+      "price": 156000,
+      "image": "https://focus.ua/static/storage/thumbs/920x465/f/18/f190ae0f-56e85bf54c090f68269967acb4fc018f.jpg?v=2294_1",
+      "ram": "64",
+      "memory": "1024",
+      "color": "yellow",
+      "id": 412
     }
   ]
 }

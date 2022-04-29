@@ -26,7 +26,7 @@ import {
 import ProductCard from "./ProductCard";
 import { clientContext } from "../contexts/ClientContext";
 import styled from "styled-components";
-
+import { mobile } from "../responsive";
 //! Styled Components
 
 const AdminButton = styled.button`
@@ -189,11 +189,7 @@ const Navbar = () => {
                   <Box
                     sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
                   >
-                    <Avatar
-                      style={{ marginRight: 10 }}
-                      src={user.photoURL}
-                      alt={user.displayname}
-                    />
+                    <Avatar style={{ marginRight: 8 }} src={user.photoURL} />
                   </Box>
                   <Box
                     sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
@@ -206,10 +202,10 @@ const Navbar = () => {
                 </>
               ) : (
                 <Button
+                  className="buttonMargon"
                   onClick={authWithGoogle}
                   variant="outlined"
                   color="inherit"
-                  sx={{ mx: 14 }}
                 >
                   Войти
                 </Button>

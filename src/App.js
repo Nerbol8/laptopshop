@@ -6,6 +6,7 @@ import Navigation from "./Navigation";
 import bgImage from "./videos/background.mp4";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import Slider from "./pages/Slider";
 
 const App = () => {
   const particlesInit = async (main) => {
@@ -26,7 +27,6 @@ const App = () => {
       {/* <video className="videoApp" autoPlay loop muted>
         <source src={bgImage} type="video/mp4" />
       </video> */}
-
       <AdminContext>
         <Particles
           id="tsparticles"
@@ -38,7 +38,7 @@ const App = () => {
                 value: "#ffff",
               },
             },
-            fpsLimit: 120,
+            fpsLimit: 180,
             interactivity: {
               events: {
                 onClick: {
@@ -105,6 +105,7 @@ const App = () => {
             detectRetina: true,
           }}
         />
+
         <Navigation />
       </AdminContext>
     </ClientContext>

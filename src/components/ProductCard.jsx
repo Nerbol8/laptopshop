@@ -18,6 +18,7 @@ import { ShoppingCart } from "@mui/icons-material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { clientContext } from "../contexts/ClientContext";
 import { Link } from "react-router-dom";
+import { favoriteContext } from "../contexts/FavoriteContex";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
