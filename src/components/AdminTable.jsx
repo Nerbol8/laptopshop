@@ -39,14 +39,16 @@ export default function CustomizedTables(props) {
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Вид</StyledTableCell>
-            <StyledTableCell align="right">Картинка</StyledTableCell>
-            <StyledTableCell align="right">Название</StyledTableCell>
+            <StyledTableCell>№</StyledTableCell>
+            <StyledTableCell align="right">Название товара </StyledTableCell>
+            <StyledTableCell align="right">Описание</StyledTableCell>
             <StyledTableCell align="right">цена</StyledTableCell>
-            <StyledTableCell align="right">память</StyledTableCell>
-            <StyledTableCell align="right"> ОЗУ</StyledTableCell>
-            <StyledTableCell align="right">#</StyledTableCell>
-            <StyledTableCell align="right">#</StyledTableCell>
+            <StyledTableCell align="right">Картинка</StyledTableCell>
+            <StyledTableCell align="right">ОЗУ</StyledTableCell>
+            <StyledTableCell align="right">GB</StyledTableCell>
+            <StyledTableCell align="right">Цвет</StyledTableCell>
+            <StyledTableCell align="right">Изменить</StyledTableCell>
+            <StyledTableCell align="right">Удалить</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -69,11 +71,21 @@ export default function CustomizedTables(props) {
               {/* <StyledTableCell align="right">{item.memory}</StyledTableCell> */}
 
               <StyledTableCell align="right">
-                <Link to={`/admin-panel-edit/${item.id}`}>EDIT</Link>
+                <Link to={`/admin-panel-edit/${item.id}`}>
+                  <Button color="inherit" variant="outlined">
+                    EDIT
+                  </Button>
+                </Link>
               </StyledTableCell>
 
               <StyledTableCell align="right">
-                <Button onClick={() => deleteProduct(item.id)}>Del</Button>
+                <Button
+                  color="inherit"
+                  variant="outlined"
+                  onClick={() => deleteProduct(item.id)}
+                >
+                  DEL
+                </Button>
               </StyledTableCell>
             </StyledTableRow>
           ))}
