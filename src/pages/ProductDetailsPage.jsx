@@ -50,11 +50,11 @@ const ProductDetailsPage = () => {
                 {productDetails.price}
               </li>
               <li>
-                <strong>Цвет</strong>
+                <strong>ЦВЕТ</strong>
                 {productDetails.color}
               </li>
               <li>
-                <strong>память</strong>
+                <strong>GB</strong>
                 {productDetails.memory}
               </li>
               <li>
@@ -81,7 +81,7 @@ const ProductDetailsPage = () => {
               onChange={(e) => setFeedbackUser(e.target.value)}
               value={feedbackUser}
               type="text"
-              variant="standard"
+              variant="outlined"
               label="введите ваше Имя"
               style={{ marginBottom: 15 }}
             />
@@ -96,7 +96,9 @@ const ProductDetailsPage = () => {
               label="введите ваш отзыв"
               style={{ marginBottom: 15 }}
             />
-            <Button type="submit">Сотавитьс отзыв</Button>
+            <Button color="inherit" type="submit">
+              Оставить отзыв
+            </Button>
           </form>
 
           <div>

@@ -32,8 +32,7 @@ const AosSliders = () => {
           />
           <span className="descOfBes">
             Ноутбук Asus TUF Gaming F15 (FX506LI-BI5N5) 15.6\" FHD, Intel Core
-            i5-10300H, 8GB DDR4, 128GB / 256GB / 512GB / 1TB SSD",
-            "description":
+            
           </span>
         </div>
 
@@ -51,8 +50,7 @@ const AosSliders = () => {
           />
           <span className="descOfBes">
             Ноутбук Asus TUF Gaming F15 (FX506LI-BI5N5) 15.6\" FHD, Intel Core
-            i5-10300H, 8GB DDR4, 128GB / 256GB / 512GB / 1TB SSD",
-            "description":
+            
           </span>
         </div>
 
@@ -70,8 +68,7 @@ const AosSliders = () => {
           />
           <span className="descOfBes">
             Ноутбук Asus TUF Gaming F15 (FX506LI-BI5N5) 15.6\" FHD, Intel Core
-            i5-10300H, 8GB DDR4, 128GB / 256GB / 512GB / 1TB SSD",
-            "description":
+           
           </span>
         </div>
       </AnimationDiv>

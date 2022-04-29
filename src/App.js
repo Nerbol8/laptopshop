@@ -42,7 +42,7 @@ const App = () => {
             interactivity: {
               events: {
                 onClick: {
-                  enable: true,
+                  enable: false,
                   mode: "push",
                 },
                 onHover: {
@@ -53,7 +53,7 @@ const App = () => {
               },
               modes: {
                 push: {
-                  quantity: 4,
+                  quantity: 2,
                 },
                 repulse: {
                   distance: 200,
@@ -63,17 +63,17 @@ const App = () => {
             },
             particles: {
               color: {
-                value: "#333",
+                value: "#3333",
               },
               links: {
-                color: "#333",
+                color: "#3333",
                 distance: 150,
                 enable: true,
                 opacity: 0.5,
                 width: 1,
               },
               collisions: {
-                enable: true,
+                enable: false,
               },
               move: {
                 direction: "none",
