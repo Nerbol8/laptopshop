@@ -97,11 +97,13 @@ const OrderPage = () => {
           </div>
         </div>
 
-        <input
+        <button
           type="submit"
-          value="proceed to checkout"
+          placeholder="proceed to checkout"
           class="submit-btn"
-        ></input>
+        >
+          submit{" "}
+        </button>
         {/* <TextField
           id="submitIt"
           label="proceed to checkout"

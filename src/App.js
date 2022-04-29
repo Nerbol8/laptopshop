@@ -23,10 +23,7 @@ const App = () => {
   };
   return (
     <ClientContext>
-      {/* <Backgound /> */}
-      {/* <video className="videoApp" autoPlay loop muted>
-        <source src={bgImage} type="video/mp4" />
-      </video> */}
+      
       <AdminContext>
         <Particles
           id="tsparticles"
