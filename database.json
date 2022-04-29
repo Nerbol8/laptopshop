@@ -22,7 +22,12 @@
       "color": "white",
       "id": 2,
       "likes": 1,
-      "feedBacks": []
+      "feedBacks": [
+        {
+          "title": "Прошлый раз покупал и очень понравилось",
+          "user": "Azamat"
+        }
+      ]
     },
     {
       "name": "Ноутбук Asus TUF Gaming F15 (FX506LI-BI5N5) 15.6\" FHD, Intel Core i5-10300H, 8GB DDR4, 128GB / 256GB / 512GB / 1TB SSD",

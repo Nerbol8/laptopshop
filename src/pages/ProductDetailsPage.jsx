@@ -1,6 +1,6 @@
 import { Button, Container, TextField } from "@mui/material";
 import React, { useEffect, useContext, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { clientContext } from "../contexts/ClientContext";
 import OrderPage from "../pages/OrderPage";
 
@@ -46,7 +46,7 @@ const ProductDetailsPage = () => {
             <h2>{productDetails.name}</h2>
             <ul>
               <li>
-                <strong>ЦЕНА</strong>
+                <strong>цена</strong>
                 {productDetails.price}
               </li>
               <li>
@@ -63,16 +63,18 @@ const ProductDetailsPage = () => {
               </li>
               <li>
                 <strong>ОЗУ</strong>
-                {productDetails.ram}
+                {productDetails.ram} GB
               </li>
             </ul>
           </div>
         </div>
 
         <div className="product-buy">
-          <Button onClick={OrderPage} type="submit">
-            Заказать
-          </Button>
+          <Link to="/orderform">
+            <Button onClick={OrderPage} type="submit">
+              Заказать
+            </Button>
+          </Link>
         </div>
         <div className="product-detail-feedback">
           <h3>Отзывы</h3>
