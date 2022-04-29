@@ -16,6 +16,7 @@
     "firebase": "^9.6.11",
     "react": "^18.0.0",
     "react-bootstrap": "^2.3.1",
+    "react-credit-cards": "^0.8.3",
     "react-dom": "^18.0.0",
     "react-infinite-scroll-component": "^6.1.0",
     "react-router-dom": "^6.3.0",

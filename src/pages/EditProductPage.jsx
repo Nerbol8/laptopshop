@@ -32,7 +32,7 @@ const EditProductPage = () => {
       }
     }
     saveEditedPruduct(editedProduct);
-    navigate("/admim-panel");
+    navigate("/admin-panel");
   };
 
   useEffect(() => {
@@ -65,7 +65,10 @@ const EditProductPage = () => {
           />
           <TextField
             onChange={(e) =>
-              setEditedProduct({ ...editedProduct, description: e.target.value })({
+              setEditedProduct({
+                ...editedProduct,
+                description: e.target.value,
+              })({
                 ...editedProduct,
                 description: e.target.value,
               })

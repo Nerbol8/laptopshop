@@ -9,8 +9,6 @@ const AdminPage = () => {
   const datat = React.useContext(clientContext);
   const { cartCount, authWithGoogle, user, logOut } = datat;
 
-
-
   useEffect(() => {
     getProducts();
   }, []);
@@ -18,7 +16,7 @@ const AdminPage = () => {
   return (
     <Container>
       <div>
-        <h1>All products you are <span className="userName">{user.email}</span></h1>
+        <h1>All products you are</h1>
         <AdminTable products={products} />
       </div>
     </Container>

@@ -3,7 +3,7 @@ import Backgound from "./components/Backgound";
 import AdminContext from "./contexts/AdminContext";
 import ClientContext from "./contexts/ClientContext";
 import Navigation from "./Navigation";
-import bgImage from "./videos/background.mp4";
+// import bgImage from "./videos/background.mp4";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
@@ -22,10 +22,6 @@ const App = () => {
   };
   return (
     <ClientContext>
-      {/* <Backgound /> */}
-      {/* <video className="videoApp" autoPlay loop muted>
-
-
       <AdminContext>
         <Particles
           id="tsparticles"

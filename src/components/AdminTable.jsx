@@ -42,10 +42,10 @@ export default function CustomizedTables(props) {
             <StyledTableCell>№</StyledTableCell>
             <StyledTableCell align="right">Название товара </StyledTableCell>
             <StyledTableCell align="right">Описание</StyledTableCell>
-            <StyledTableCell align="right">цена</StyledTableCell>
+            <StyledTableCell align="right">Цена</StyledTableCell>
             <StyledTableCell align="right">Картинка</StyledTableCell>
             <StyledTableCell align="right">ОЗУ</StyledTableCell>
-            <StyledTableCell align="right">GB</StyledTableCell>
+            <StyledTableCell align="right">Память</StyledTableCell>
             <StyledTableCell align="right">Цвет</StyledTableCell>
             <StyledTableCell align="right">Изменить</StyledTableCell>
             <StyledTableCell align="right">Удалить</StyledTableCell>
@@ -61,12 +61,12 @@ export default function CustomizedTables(props) {
               <StyledTableCell align="right">
                 {item.description}
               </StyledTableCell>
-              <StyledTableCell align="right">{item.price}</StyledTableCell>
+              <StyledTableCell align="right">{item.price}Сом</StyledTableCell>
               <StyledTableCell align="right">
                 <img width={100} src={item.image} />
               </StyledTableCell>
-              <StyledTableCell align="right">{item.ram}</StyledTableCell>
-              <StyledTableCell align="right">{item.memory}</StyledTableCell>
+              <StyledTableCell align="right">{item.ram}GB</StyledTableCell>
+              <StyledTableCell align="right">{item.memory}GB</StyledTableCell>
               <StyledTableCell align="right">{item.color}</StyledTableCell>
               {/* <StyledTableCell align="right">{item.memory}</StyledTableCell> */}
 
