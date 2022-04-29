@@ -24,9 +24,9 @@ const App = () => {
     <ClientContext>
       {/* <Backgound /> */}
       {/* <video className="videoApp" autoPlay loop muted>
-          <source src={bgImage} type="video/mp4" />
-        </video> */}
-        
+        <source src={bgImage} type="video/mp4" />
+      </video> */}
+
       <AdminContext>
         <Particles
           id="tsparticles"
@@ -63,10 +63,10 @@ const App = () => {
             },
             particles: {
               color: {
-                value: "#0d47a1",
+                value: "#333",
               },
               links: {
-                color: "#0d47a1",
+                color: "#333",
                 distance: 150,
                 enable: true,
                 opacity: 0.5,
@@ -82,7 +82,7 @@ const App = () => {
                   default: "bounce",
                 },
                 random: false,
-                speed: 6,
+                speed: 4,
                 straight: false,
               },
               number: {
