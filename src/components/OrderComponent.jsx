@@ -9,34 +9,37 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import styled from "styled-components";
-import { adminContext } from "../contexts/AdminContext";
+import { clientContext } from "../contexts/ClientContext";
 import { mobile } from "../responsive";
+import { api2 } from "../helpers/const";
 
 const Tag = styled.h2`
   width: 700;
   ${mobile({ backgroundColor: "red" })}
 `;
 
-const AddProductPage = () => {
-  const data = React.useContext(adminContext);
-  const { addProduct } = data;
+const OrderComponent = () => {
+  const data = React.useContext(clientContext);
+  const { addOrder } = data;
 
-  const [newProduct, setNewProduct] = useState({
-    name: "",
-    description: "",
-    price: "",
-    image: "",
-    ram: "",
-    memory: "",
-    color: "",
-    feedbacks: [],
-    likes: 0,
+  const [newOrder, setNewOrder] = useState({
+    fullname: "",
+    email: "",
+    address: "",
+    city: "",
+    country: "",
+    zipcode: "",
+    namecard: "",
+    creditcardnumber: "",
+    expmonth: "",
+    expyear: "",
+    cvv: "",
   });
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    for (let key in newProduct) {
-      let value = newProduct[key];
+    for (let key in newOrder) {
+      let value = newOrder[key];
       if (typeof value === "string") {
         if (!value.trim()) {
           alert("Заполните поля!");
@@ -45,15 +48,19 @@ const AddProductPage = () => {
       }
     }
 
-    addProduct(newProduct);
-    setNewProduct({
-      name: "",
-      description: "",
-      price: "",
-      image: "",
-      ram: "",
-      memory: "",
-      color: "",
+    addOrder(newOrder);
+    setNewOrder({
+      fullname: "",
+      email: "",
+      address: "",
+      city: "",
+      country: "",
+      zipcode: "",
+      namecard: "",
+      creditcardnumber: "",
+      expmonth: "",
+      expyear: "",
+      cvv: "",
     });
   };
 
@@ -64,44 +71,44 @@ const AddProductPage = () => {
         <form onSubmit={handleSubmit}>
           <TextField
             onChange={(e) =>
-              setNewProduct({ ...newProduct, name: e.target.value })
+              setNewOrder({ ...newOrder, fullname: e.target.value })
             }
-            value={newProduct.name}
+            value={newOrder.name}
             label="Введите название"
-            variant="outlined"
+            variant="standard"
           />
           <TextField
             onChange={(e) =>
-              setNewProduct({ ...newProduct, description: e.target.value })
+              setNewOrder({ ...newOrder, description: e.target.value })
             }
-            value={newProduct.description}
+            value={newOrder.description}
             label="Введите описание"
-            variant="outlined"
+            variant="standard"
           />
           <TextField
             type="number"
             onChange={(e) =>
-              setNewProduct({ ...newProduct, price: parseInt(e.target.value) })
+              setNewOrder({ ...newOrder, price: parseInt(e.target.value) })
             }
-            value={newProduct.price}
+            value={newOrder.price}
             label="Введите цену"
-            variant="outlined"
+            variant="standard"
           />
           <TextField
             onChange={(e) =>
-              setNewProduct({ ...newProduct, image: e.target.value })
+              setNewOrder({ ...newOrder, image: e.target.value })
             }
-            value={newProduct.image}
-            label="Ссылка на фото"
-            variant="outlined"
+            value={newOrder.image}
+            label="Введите фото"
+            variant="standard"
           />
-          <FormControl variant="outlined">
+          <FormControl variant="standard">
             <InputLabel id="color-select-label">Выберите цвет</InputLabel>
             <Select
               onChange={(e) =>
-                setNewProduct({ ...newProduct, color: e.target.value })
+                setNewOrder({ ...newOrder, color: e.target.value })
               }
-              value={newProduct.color}
+              value={newOrder.color}
               label="Выберите цвет"
               labelId="color-select-label"
             >
@@ -113,13 +120,13 @@ const AddProductPage = () => {
               <MenuItem value="red">Красный</MenuItem>
             </Select>
           </FormControl>
-          <FormControl variant="outlined">
+          <FormControl variant="standard">
             <InputLabel id="memory-select-label">Выберите память</InputLabel>
             <Select
               onChange={(e) =>
-                setNewProduct({ ...newProduct, memory: e.target.value })
+                setNewOrder({ ...newOrder, memory: e.target.value })
               }
-              value={newProduct.memory}
+              value={newOrder.memory}
               label="Выберите память"
               labelId="memory-select-label"
             >
@@ -129,13 +136,13 @@ const AddProductPage = () => {
               <MenuItem value="2048">2048 GB</MenuItem>
             </Select>
           </FormControl>
-          <FormControl variant="outlined">
-            <InputLabel id="ram-select-label">Выберите Озу</InputLabel>
+          <FormControl variant="standard">
+            <InputLabel id="ram-select-label">Выберите ОЗУ</InputLabel>
             <Select
               onChange={(e) =>
-                setNewProduct({ ...newProduct, ram: e.target.value })
+                setNewOrder({ ...newOrder, ram: e.target.value })
               }
-              value={newProduct.ram}
+              value={newOrder.ram}
               label="Выберите ОЗУ "
               labelId="ram-select-label"
             >
@@ -155,4 +162,4 @@ const AddProductPage = () => {
   );
 };
 
-export default AddProductPage;
+export default OrderComponent;

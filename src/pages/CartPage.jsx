@@ -40,8 +40,9 @@ const CartPage = () => {
                 <TableCell align="center">Название</TableCell>
                 <TableCell align="center">Фото</TableCell>
                 <TableCell align="center">Цена</TableCell>
-                <TableCell align="center">Кол-во</TableCell>
+                <TableCell align="center">Количество</TableCell>
                 <TableCell align="center">Сумма</TableCell>
+                {/* <TableCell align="center">Сумма</TableCell> */}
               </TableRow>
             </TableHead>
             <TableBody>
@@ -50,6 +51,7 @@ const CartPage = () => {
                   key={item.product.id}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
+                  <TableCell align="center">{item.product.name}</TableCell>
                   <TableCell align="center">
                     <img width={100} src={item.product.image} alt="" />
                   </TableCell>

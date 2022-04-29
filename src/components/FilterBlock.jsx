@@ -73,10 +73,10 @@ const FilterBlock = ({ getProducts }) => {
           label="Выберите память"
           labelId="color-label"
         >
-          <MenuItem value="256">256</MenuItem>
-          <MenuItem value="512">512</MenuItem>
-          <MenuItem value="1024">1024</MenuItem>
-          <MenuItem value="2048">2048</MenuItem>
+          <MenuItem value="256">256 GB</MenuItem>
+          <MenuItem value="512">512 GB</MenuItem>
+          <MenuItem value="1024">1024 GB</MenuItem>
+          <MenuItem value="2048">2048 GB</MenuItem>
         </Select>
       </FormControl>
       <FormControl variant="outlined">
@@ -87,11 +87,11 @@ const FilterBlock = ({ getProducts }) => {
           label="Выберите ram"
           labelId="color-label"
         >
-          <MenuItem value="4">4</MenuItem>
-          <MenuItem value="8">8</MenuItem>
-          <MenuItem value="16">16</MenuItem>
-          <MenuItem value="32">32</MenuItem>
-          <MenuItem value="xxl">64</MenuItem>
+          <MenuItem value="4">4 GB</MenuItem>
+          <MenuItem value="8">8 GB</MenuItem>
+          <MenuItem value="16">16 GB</MenuItem>
+          <MenuItem value="32">32 GB</MenuItem>
+          <MenuItem value="xxl">64 GB</MenuItem>
         </Select>
       </FormControl>
       <Button variant="outlined" color="inherit" onClick={resetFilter}>
