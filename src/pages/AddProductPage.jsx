@@ -92,7 +92,9 @@ const AddProductPage = () => {
               setNewProduct({ ...newProduct, image: e.target.value })
             }
             value={newProduct.image}
+
             label="Ссылка на фото"
+
             variant="outlined"
           />
           <FormControl variant="outlined">
@@ -146,7 +148,7 @@ const AddProductPage = () => {
               <MenuItem value="64">64 GB</MenuItem>
             </Select>
           </FormControl>
-          <Button type="submit" variant="outlined">
+          <Button color="inherit" type="submit" variant="outlined">
             Добавить
           </Button>
         </form>

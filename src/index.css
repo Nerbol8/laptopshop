@@ -124,7 +124,7 @@ a {
   margin: 0;
 }
 .userName {
-  margin: 0px 30px;
+  margin: 0px 20px;
   color: #000 !important;
 }
 
@@ -141,7 +141,7 @@ a {
 .logoAnimation {
   color: #000 !important;
   width: 100px !important;
-  margin-left: 25px !important;
+  margin-left: 10px !important;
   animation: logo-circle 5s linear infinite 0s;
   transition: 0.5s !important;
 }
@@ -223,6 +223,33 @@ canvas {
   vertical-align: bottom;
 }
 
+.aosName {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 25px;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.descOfBes {
+  display: flex;
+  margin-top: 40px;
+}
+
 #tsparticles {
   z-index: -5;
+}
+
+.box-shadow {
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+@media(min-width: 380px) {
+  .buttonMargon {
+    margin: 0 !important;
+  }
 }

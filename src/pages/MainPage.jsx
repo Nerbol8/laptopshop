@@ -6,6 +6,8 @@ import ErbolPagination from "../components/ErbolPagination";
 import ProductCard from "../components/ProductCard";
 import { clientContext } from "../contexts/ClientContext";
 import News from "../components/News";
+import Slider from "./Slider";
+import AosSliders from "./AosSliders";
 
 const MainPage = () => {
   const data = useContext(clientContext);
@@ -18,6 +20,8 @@ const MainPage = () => {
   return (
     <div>
       {/* <News /> */}
+      <Slider />
+      <AosSliders />
       <Container>
         <div>
           <FilterBlock getProducts={getProducts} />
